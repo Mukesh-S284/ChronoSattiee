@@ -1,0 +1,23 @@
+services:
+  chronosattie:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chronosattie:latest
+    container_name: chronosattie_app
+    ports:
+      - "8501:8501"
+    environment:
+      - EARTHDATA_USERNAME=${EARTHDATA_USERNAME:-}
+      - EARTHDATA_PASSWORD=${EARTHDATA_PASSWORD:-}
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - ./data:/app/data
+      - ./models/saved:/app/models/saved
+      - ./reports:/app/reports
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

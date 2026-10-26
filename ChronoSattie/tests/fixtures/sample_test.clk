@@ -1,0 +1,9 @@
+     3.00           C                   CLK                 RINEX VERSION / TYPE
+CHRONOSATTIE        FIXTURE DATA GEN    20260428 000000 UTC PGM / RUN BY / DATE
+     1    AS                                                # / TYPES OF DATA   
+   GPS                                                      TIME SYSTEM ID      
+                                                            END OF HEADER       
+AS G01 2026 04 28 00 00  0.00000000  1   0.123456789012E-03  0.100000E-09
+AS G02 2026 04 28 00 00  0.00000000  1  -0.234567890123E-03  0.100000E-09
+AS G01 2026 04 28 00 00 30.00000000  1   0.123456801234E-03  0.100000E-09
+AS G02 2026 04 28 00 00 30.00000000  1  -0.234567881234E-03  0.100000E-09
